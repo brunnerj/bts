@@ -3,15 +3,27 @@ phases:
   install:
     commands:
       - echo "install step"
-      - npm install
+      - npm install -g gatsby-cli
   pre_build:
     commands:
       - echo "pre_build step"
+      - npm ci
   build:
     commands:
       - echo "build step"
-      - gatsby build
+      - npm run build
   post_build:
     commands:
       - echo "post_build step"
-      - aws s3 sync --delete public/ "s3://brunnertechnicalservices.com"
+      - npm run deploy
+      #- aws s3 sync --delete public/ "s3://brunnertechnicalservices.com"
+artifacts:
+  base-directory: public
+  files:
+    - '**/*'
+  discard-paths: no
+cache:
+  paths:
+    - '.cache/*'
+    - 'node_modules/*'
+    - 'public/*'

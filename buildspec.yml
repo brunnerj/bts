@@ -2,19 +2,20 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "install step"
+      - echo install step
       - npm install -g gatsby-cli
   pre_build:
     commands:
-      - echo "pre_build step"
+      - echo pre_build step
       - npm ci
   build:
     commands:
-      - echo "build step"
+      - echo build step
       - npm run build
   post_build:
     commands:
-      - echo "post_build step"
+      - echo post_build step
+      - echo deploying to $TARGET_BUCKET_NAME
       - npm run deploy
       #- aws s3 sync --delete public/ "s3://brunnertechnicalservices.com"
 artifacts:

@@ -18,7 +18,6 @@ phases:
       - echo deploying to $TARGET_BUCKET_NAME
       - echo note target address is $TARGET_ADDRESS
       - npm run deploy
-      #- aws s3 sync --delete public/ s3://$TARGET_BUCKET_NAME
 artifacts:
   base-directory: public
   files:

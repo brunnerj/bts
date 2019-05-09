@@ -1,19 +1,35 @@
-# gatsby-starter-dimension
+# Brunner Technical Services LLC
 
-**This is a starter for Gatsby.js V2.**
+Static web site based on [Gatsby.js](https://www.gatsbyjs.org/)
+and the [gatsby-starter-dimension](https://github.com/codebushi/gatsby-starter-dimension)
+template.
 
-**The older V1 version of this starter can be found on the v1 branch:**
 
-Gatsby.js V2 starter based on the Dimension site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+## Development and Preview
 
-## Preview
+Changes pushed to the master branch of this repository will be automatically built
+using an AWS CodePipeline into a preview that must be manually accepted
+before it will be published to the live site https://brunnertechnicalservices.com.
 
-https://gatsby-dimension.surge.sh/
+The AWS CI/CD process follows guidelines presented in
+[this](https://blog.joshwalsh.me/aws-gatsby/) article.
+
+*Viewing the preview requires authorization credentials*
+
+https://preview.brunnertechnicalservices.com
+
+
+## Local Testing
+
+To get an experience closer to production, 
+use `gatsby serve --host brunnertechnicalservices.local --port 80` instead of
+the typical `gatsby develop`. Note that the local `hosts` file has an entry
+to point `localhost` to this address.
+
 
 ## Installation
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-<br/>
-`gatsby new gatsby-starter-dimension https://github.com/codebushi/gatsby-starter-dimension`
-
-Run `gatsby develop` in the terminal to start the dev site.
+As with most Node-based programs, just clone the repository locally, switch
+to the cloned project directory and `npm install`.  Then follow the local
+testing guidelines above. `gatsby develop` still works for a quick check
+of the site operation (browse instead to `http://localhost:8000`).

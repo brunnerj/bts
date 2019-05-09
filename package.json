@@ -17,12 +17,17 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    ""
+    "software",
+    "consulting",
+    "technical",
+    "design",
+    "instrumentation",
+    "iot",
+    "iiot"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
     "deploy": "gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths \"/*\"",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,6 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/brunnerj/bts"
   }
 }

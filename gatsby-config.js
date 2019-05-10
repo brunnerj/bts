@@ -7,6 +7,9 @@ module.exports = {
 		description: "A small sampling of our capabilities."
 	},
 	plugins: [
+		'gatsby-plugin-sass',
+		'gatsby-plugin-offline',
+		'gatsby-plugin-emotion',
 		'gatsby-plugin-react-helmet',
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -38,8 +41,6 @@ module.exports = {
 			options: {
 				siteUrl: targetAddress.href.slice(0, -1),
 			},
-		},
-		'gatsby-plugin-sass',
-		'gatsby-plugin-offline'
+		}
 	],
 }

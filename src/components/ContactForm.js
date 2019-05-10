@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
 const API_CONTACT_URL = 'https://97ty7szc7i.execute-api.us-east-1.amazonaws.com/bts/contact-us';
@@ -47,6 +48,10 @@ class ContactForm extends React.Component {
 			mode: 'cors',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(logData)
+		})
+		.then(() => {
+			alert('Message sent');
+			this.props.done();
 		});
 	}
 
@@ -96,6 +101,10 @@ class ContactForm extends React.Component {
 			</form>
 		);
 	}
+}
+
+ContactForm.propTypes = {
+	done: PropTypes.func.isRequired
 }
 
 export default ContactForm;

@@ -42,7 +42,7 @@ class Main extends React.Component {
 				<article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 					<h2 className='major'>Contact</h2>
 					
-					<ContactForm />
+					<ContactForm done={this.props.onCloseArticle} />
 
 					{close}
 				</article>
@@ -58,7 +58,7 @@ Main.propTypes = {
 	articleTimeout: PropTypes.bool,
 	onCloseArticle: PropTypes.func,
 	timeout: PropTypes.bool,
-	setWrapperRef: PropTypes.func.isRequired,
+	setWrapperRef: PropTypes.func.isRequired
 }
 
 export default Main

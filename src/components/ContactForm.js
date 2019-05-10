@@ -46,6 +46,7 @@ class ContactForm extends React.Component {
 		// submit to AWS API Gateway
 		fetch(API_CONTACT_URL, {
 			method: 'POST',
+			mode: 'cors',
 			body: data
 		});
 	}

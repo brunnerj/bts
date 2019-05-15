@@ -44,39 +44,45 @@ class IndexPage extends React.Component {
 		this.setState({
 			isArticleVisible: !this.state.isArticleVisible,
 			article
-		})
-
-		setTimeout(() => {
-			this.setState({
-			timeout: !this.state.timeout
-			})
-		}, 325)
-
-		setTimeout(() => {
-			this.setState({
-			articleTimeout: !this.state.articleTimeout
-			})
-		}, 350)
-	}
-
-	handleCloseArticle() {
-
-		this.setState({
-			articleTimeout: !this.state.articleTimeout
-		})
+		});
 
 		setTimeout(() => {
 			this.setState({
 				timeout: !this.state.timeout
 			});
-		}, 325)
+		}, 325);
+
+		setTimeout(() => {
+			this.setState({
+				articleTimeout: !this.state.articleTimeout
+			});
+		}, 350);
+	}
+
+	handleCloseArticle(switchToArticle) {
+
+		this.setState({
+			articleTimeout: !this.state.articleTimeout
+		});
+
+		setTimeout(() => {
+			this.setState({
+				timeout: !this.state.timeout
+			});
+		}, 325);
 
 		setTimeout(() => {
 			this.setState({
 				isArticleVisible: !this.state.isArticleVisible,
 				article: ''
+			}, () => { 
+				if (switchToArticle) {
+					this.handleOpenArticle(switchToArticle);
+				}
 			});
-		}, 350)
+		}, 350);
+
+
 	}
 
 	handleClickOutside(event) {
@@ -98,7 +104,6 @@ class IndexPage extends React.Component {
 							timeout={this.state.timeout}
 							articleTimeout={this.state.articleTimeout}
 							article={this.state.article}
-							onOpenArticle={this.handleOpenArticle}
 							onCloseArticle={this.handleCloseArticle}
 							setWrapperRef={this.setWrapperRef}
 						/>

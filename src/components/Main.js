@@ -25,11 +25,7 @@ class Main extends React.Component {
 
 		e.preventDefault();
 
-		this.props.onCloseArticle();
-		
-		setTimeout(() => {
-			this.props.onOpenArticle(article);
-		}, 150);
+		this.props.onCloseArticle(article);
 	}
 
 	render() {
@@ -64,7 +60,9 @@ class Main extends React.Component {
 
 					<p>I can integrate with your existing team or lead your project from
 					inception through release, and you'll always get a solid, well-documented
-					and easily maintained product. <a href='#contact' onClick={(e) => {this.handleSwitchArticle('contact', e)}} >Contact me now</a> to
+					and easily maintained product.</p>
+					
+					<p><a href='#contact' onClick={(e) => {this.handleSwitchArticle('contact', e)}} >Contact me now</a> to
 					discuss the details of your project!</p>
 
 					{close}

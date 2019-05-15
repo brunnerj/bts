@@ -92,7 +92,7 @@ class ContactForm extends React.Component {
 
 				<ul className='icons'>
 					<li><a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/james-brunner/' className='icon fa-linkedin'><span className='label'>LinkedIn</span></a></li>
-					<li><a target='_blank' rel='noopener noreferrer' href='#' className='icon fa-instagram'><span className='label'>Instagram</span></a></li>
+					<li><a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/james.jack.brunner/' className='icon fa-instagram'><span className='label'>Instagram</span></a></li>
 					<li><a target='_blank' rel='noopener noreferrer' href='https://github.com/brunnerj' className='icon fa-github'><span className='label'>GitHub</span></a></li>
 				</ul>
 			</form>

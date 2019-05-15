@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import ContactForm from './ContactForm';
 
 import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
+import pic02 from '../images/pic02.png'
 import pic03 from '../images/pic03.png'
 
 const highlightStyle = css`
@@ -73,7 +73,7 @@ class Main extends React.Component {
 					style={{display:'none'}}>
 
 					<h2 className='major'>Work</h2>
-					<span className='image main'><img src={pic02} alt='' /></span>
+					<span className='image main'><img src={pic02} title='Laptop on desk book stacks' alt='by freddie marriage on Unsplash' /></span>
 					
 					<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
 					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>

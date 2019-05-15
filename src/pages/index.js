@@ -67,15 +67,15 @@ class IndexPage extends React.Component {
 
 		setTimeout(() => {
 			this.setState({
-			timeout: !this.state.timeout
-			})
+				timeout: !this.state.timeout
+			});
 		}, 325)
 
 		setTimeout(() => {
 			this.setState({
-			isArticleVisible: !this.state.isArticleVisible,
-			article: ''
-			})
+				isArticleVisible: !this.state.isArticleVisible,
+				article: ''
+			});
 		}, 350)
 	}
 

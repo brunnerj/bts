@@ -64,7 +64,8 @@ class ContactForm extends React.Component {
 		const { displayErrors } = this.state;
 
 		return (
-			<form method='post' onSubmit={this.handleSubmit} noValidate css={displayErrors ? validatedFormStyle : {}}>
+			<form method='post' onSubmit={this.handleSubmit} noValidate 
+				css={displayErrors ? validatedFormStyle : {}}>
 
 				<div className='field half first'>
 					<label htmlFor='name'>Name</label>
@@ -77,27 +78,23 @@ class ContactForm extends React.Component {
 				</div>
 
 				{/* this input is used as a spambot honeypot */}
-				<input type='checkbox' name='contact' value='1'  tabIndex='-1' autoComplete='off' />
+				<input type='checkbox' name='contact' value='1' tabIndex='-1' autoComplete='off' />
 				
 				<div className='field'>
 					<label htmlFor='message'>Message</label>
 					<textarea name='message' id='message' rows='4'></textarea>
 				</div>
 
-				<ul className="actions">
-					<li><input type="submit" value="Send Message" className="special" /></li>
-					<li><input type="reset" value="Reset" onClick={this.handleReset}/></li>
+				<ul className='actions'>
+					<li><input type='submit' value='Send Message' className='special' /></li>
+					<li><input type='reset' value='Reset' onClick={this.handleReset}/></li>
 				</ul>
 
-				{/* These commented until Brunner Technical Services has a social presence!
-				<ul className="icons">
-					<li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-					<li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-					<li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-					<li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+				<ul className='icons'>
+					<li><a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/james-brunner/' className='icon fa-linkedin'><span className='label'>LinkedIn</span></a></li>
+					<li><a target='_blank' rel='noopener noreferrer' href='#' className='icon fa-instagram'><span className='label'>Instagram</span></a></li>
+					<li><a target='_blank' rel='noopener noreferrer' href='https://github.com/brunnerj' className='icon fa-github'><span className='label'>GitHub</span></a></li>
 				</ul>
-				*/}
-
 			</form>
 		);
 	}

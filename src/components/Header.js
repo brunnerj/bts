@@ -4,7 +4,6 @@ import { css } from '@emotion/core';
 
 import Logo from './Logo';
 
-
 const Header = (props) => (
 	<header id='header' style={props.timeout ? {display: 'none'} : {}}>
 		

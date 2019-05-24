@@ -1,26 +1,28 @@
-const targetAddress = new URL(process.env.TARGET_ADDRESS || `http://brunnertechnicalservices.local`);
+const targetAddress = new URL(
+	process.env.TARGET_ADDRESS || `http://brunnertechnicalservices.local`
+);
 
 module.exports = {
 	siteMetadata: {
 		title: 'Brunner Technical Services LLC',
 		author: 'James Brunner',
-		description: 'A small sampling of our capabilities.'
+		description: 'A small sampling of our capabilities.',
 	},
 	plugins: [
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'images',
-				path: `${__dirname}/src/images`
-			}
-		}, 
+				path: `${__dirname}/src/images`,
+			},
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'projects',
-				path: `${__dirname}/src/projects`
-			}
-		}, 
+				path: `${__dirname}/src/projects`,
+			},
+		},
 		'gatsby-plugin-sass',
 		'gatsby-plugin-offline',
 		'gatsby-plugin-emotion',
@@ -31,20 +33,18 @@ module.exports = {
 			resolve: 'gatsby-transformer-remark',
 			options: {
 				plugins: [
-					{ 
+					{
 						resolve: 'gatsby-remark-images',
 						options: {
 							maxWidth: 760,
-							wrapperStyle: {
-
-							},
-							linkImagesToOriginal: false
-						}
+							wrapperStyle: {},
+							linkImagesToOriginal: false,
+						},
 					},
 					'gatsby-remark-copy-linked-files',
-					'gatsby-remark-smartypants'
-				]
-			}
+					'gatsby-remark-smartypants',
+				],
+			},
 		},
 		{
 			resolve: 'gatsby-plugin-manifest',
@@ -67,7 +67,7 @@ module.exports = {
 				hostname: targetAddress.hostname,
 				acl: null,
 				params: {
-					// In case you want to add any custom content types: 
+					// In case you want to add any custom content types:
 					// https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
 				},
 			},
@@ -77,6 +77,6 @@ module.exports = {
 			options: {
 				siteUrl: targetAddress.href.slice(0, -1),
 			},
-		}
+		},
 	],
-}
+};

@@ -22,7 +22,7 @@ https://preview.brunnertechnicalservices.com
 ## Local Testing
 
 To get an experience closer to production, 
-use `gatsby serve --host brunnertechnicalservices.local --port 80` instead of
+use `sudo gatsby serve --host brunnertechnicalservices.local --port 80` instead of
 the typical `gatsby develop`. Note that the local `hosts` file has an entry
 to point `localhost` to this address.
 

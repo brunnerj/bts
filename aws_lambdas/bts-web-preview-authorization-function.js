@@ -5,7 +5,7 @@ exports.handler = (event, context, callback) => {
 	const headers = request.headers;
 
 	const users = {
-		admin: 'G00se Washed',
+		admin: 'G00seWashed',
 	};
 
 	// Require Basic authentication

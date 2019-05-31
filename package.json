@@ -16,6 +16,7 @@
     "gatsby-plugin-s3": "^0.2.5",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-remark-copy-images": "^0.2.1",
     "gatsby-remark-copy-linked-files": "^2.0.12",
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-smartypants": "^2.0.9",
@@ -38,6 +39,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "serve": "sudo gatsby serve --host brunnertechnicalservices.local --port 80",
     "build": "gatsby build",
     "deploy": "gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths \"/*\"",
     "format": "prettier --write '**/*.js'",

@@ -47,7 +47,7 @@ const projectListStyle = css`
 
 		&:hover::before {
 			opacity: 0.8;
-		}
+		}	
 	}
 
 	p {
@@ -73,6 +73,7 @@ const Main = ({
 	onCloseArticle,
 	setWrapperRef,
 }) => {
+
 	const close = (
 		<div
 			className="close"
@@ -126,12 +127,11 @@ const Main = ({
 	const projects = data.projects.edges;
 
 	return (
-		<div
-			id="main"
+		<div id="main"
 			ref={setWrapperRef}
 			style={timeout ? { display: 'flex' } : { display: 'none' }}>
-			<article
-				id="intro"
+
+			<article id="intro"
 				className={`${article === 'intro' ? 'active' : ''} ${
 					articleTimeout ? 'timeout' : ''
 				}`}
@@ -146,33 +146,51 @@ const Main = ({
 				</span>
 
 				<p>
-					Hello, I'm <span css={highlightStyle}>James Brunner</span>,
+					Hello, I'm{' '}
+					<span css={highlightStyle}>
+						James Brunner
+					</span>,
 					the founding member and principal engineer at{' '}
 					<span css={highlightStyle}>
 						Brunner Technical Services LLC
-					</span>
-					. I specialize in full-stack software development for IIoT,
-					equipment automation and system analytics. I have the skills
-					and experience to create modern and intuitive web-based,
-					mobile native and enterprise software applications and
-					interfaces for a variety of equipment and industrial
-					infrastructure.
+					</span>.
+				</p>
+					
+				<p>
+					I am a full-stack software developer specializing in automation and
+					analytics for companies seeking to build efficient, economical and
+					easy-to-use systems that lower their operational costs. I have the
+					skills to create modern and intuitive web, mobile and enterprise
+					applications for a wide variety of equipment and industrial infrastructure.
 				</p>
 
 				<p>
-					With 23+ years of software development experience, I have
-					delivered quality software and participated in or lead
-					projects ranging from{' '}
-					<span css={highlightStyle}>enterprise application</span>{' '}
-					designs to{' '}
-					<span css={highlightStyle}>mobile test equipment</span>{' '}
-					interfaces, and from{' '}
+					With over 23 years of experience, I have delivered quality software
+					and participated in or lead projects ranging from{' '}
+
 					<span css={highlightStyle}>
-						web applications and portal
-					</span>{' '}
-					development to{' '}
-					<span css={highlightStyle}>IIoT and embedded hardware</span>{' '}
-					solutions.
+						enterprise application
+					</span> development to{' '}
+
+					<span css={highlightStyle}>
+						mobile test equipment
+					</span> interfaces, and from{' '}
+
+					<span css={highlightStyle}>
+						web application
+					</span> and{' '}
+					
+					<span css={highlightStyle}>
+						e-commerce portal
+					</span> design to{' '}
+
+					<span css={highlightStyle}>
+						IIoT
+					</span> and{' '}
+
+					<span css={highlightStyle}>
+ 						embedded hardware
+					</span> solutions.
 				</p>
 
 				<p>
@@ -207,8 +225,7 @@ const Main = ({
 				{close}
 			</article>
 
-			<article
-				id="work"
+			<article id="work"
 				className={`${article === 'work' ? 'active' : ''} ${
 					articleTimeout ? 'timeout' : ''
 				}`}
@@ -223,20 +240,23 @@ const Main = ({
 				</span>
 
 				<p>
-					Over the past 23+ years I've worked on a wide variety of
-					software projects. Some of these were deeply intertwined
-					with specialized hardware, some leveraged the traditional
-					client-server enterprise model, and some pushed on the then
-					state-of-the-art technologies that have become commonplace
-					today, like cloud- and subscription-based applications.
+					Over the past 23+ years I've contributed my expertise to a wide variety of
+					projects. Some of these were deeply intertwined with specialized hardware,
+					some leveraged the traditional client-server enterprise model, and some
+					implemented state-of-the-art technologies that have become commonplace,
+					like cloud- and subscription-based applications.
 				</p>
 
 				<p>
 					My software design philosophy is heavily influenced by my
 					desire to{' '}
-					<span css={highlightStyle}>keep things simple</span>. My
-					code is well documented and easy to follow, troubleshoot, or
-					enhance. My user interfaces are crisp and clean and follow
+
+					<span css={highlightStyle}>
+						keep things simple
+					</span>.
+					
+					My code is well documented and easy to follow, troubleshoot, and
+					enhance. My user interfaces are crisp, clean and follow
 					modern stylistic approaches that enable users to intuitively
 					understand how they work.
 				</p>
@@ -265,8 +285,7 @@ const Main = ({
 				{close}
 			</article>
 
-			<article
-				id="about"
+			<article id="about"
 				className={`${article === 'about' ? 'active' : ''} ${
 					articleTimeout ? 'timeout' : ''
 				}`}
@@ -295,19 +314,21 @@ const Main = ({
 				{close}
 			</article>
 
-			<article
-				id="contact"
+			<article id="contact"
 				className={`${article === 'contact' ? 'active' : ''} ${
 					articleTimeout ? 'timeout' : ''
 				}`}
 				style={{ display: 'none' }}>
 				<h2 className="major">Contact</h2>
 
+				<p>Shoot me a quick message to discuss your next project!</p>
+
 				<ContactForm done={onCloseArticle} />
 
 				{close}
 			</article>
 
+			{/* Dynamically created project articles */}
 			{projects.map(({ node }, idx) => {
 				const id = 'project_' + idx;
 				return (
@@ -318,6 +339,7 @@ const Main = ({
 							articleTimeout ? 'timeout' : ''
 						}`}
 						style={{ display: 'none' }}>
+
 						<h2 className="major">{node.frontmatter.title}</h2>
 
 						<span className="image main">

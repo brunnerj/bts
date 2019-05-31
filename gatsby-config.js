@@ -32,6 +32,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
+				excerpt_separator: `<!-- end -->`,
 				plugins: [
 					{
 						resolve: 'gatsby-remark-images',
@@ -42,6 +43,7 @@ module.exports = {
 						},
 					},
 					'gatsby-remark-copy-linked-files',
+					'gatsby-remark-copy-images',
 					'gatsby-remark-smartypants',
 				],
 			},

@@ -23,6 +23,18 @@ module.exports = {
 				path: `${__dirname}/src/projects`,
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				name: 'brunner-technical-services',
+				short_name: 'bts',
+				start_url: '/',
+				background_color: '#663399',
+				theme_color: '#663399',
+				display: 'minimal-ui',
+				icon: 'src/images/icon.png', // This path is relative to the root of the site.
+			},
+		},
 		'gatsby-plugin-sass',
 		'gatsby-plugin-offline',
 		'gatsby-plugin-emotion',
@@ -46,18 +58,6 @@ module.exports = {
 					'gatsby-remark-copy-images',
 					'gatsby-remark-smartypants',
 				],
-			},
-		},
-		{
-			resolve: 'gatsby-plugin-manifest',
-			options: {
-				name: 'brunner-technical-services',
-				short_name: 'bts',
-				start_url: '/',
-				background_color: '#663399',
-				theme_color: '#663399',
-				display: 'minimal-ui',
-				icon: 'src/images/icon.png', // This path is relative to the root of the site.
 			},
 		},
 		{

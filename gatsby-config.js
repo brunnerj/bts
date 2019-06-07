@@ -36,7 +36,6 @@ module.exports = {
 			},
 		},
 		'gatsby-plugin-sass',
-		'gatsby-plugin-offline',
 		'gatsby-plugin-emotion',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sharp',

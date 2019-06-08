@@ -43,7 +43,7 @@ const Layout = ({ children, location }) => {
 					{
 						name: 'keywords',
 						content:
-							'software, consulting, technical, design, instrumentation, iot, iiot',
+							'software, consulting, technical, digital, design, instrumentation, iot, iiot, automation, testing',
 					},
 				]}>
 				<html lang="en" />

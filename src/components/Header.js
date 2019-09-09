@@ -27,8 +27,7 @@ const Header = ({ timeout, onOpenArticle }) => (
 				<h1>Brunner</h1>
 				<h2>Technical Services LLC</h2>
 				<p>
-					Expert software design for your infrastructure,
-					automation and analytics.
+					IoT - Automation - Infrastructure - Analytics
 				</p>
 			</div>
 		</div>

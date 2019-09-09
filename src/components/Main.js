@@ -311,6 +311,51 @@ const Main = ({
 
 				<p>Here is what they have to say about me:</p>
 
+				<div className='testimonial'>
+					<p className='quote'>
+						My company has been working with James for many years and I am so
+						grateful for his time and support. As the VP of Engineering at Summitek
+						and then Principal Engineer for Kaleus, James was able to offer
+						support and development when the product line we were using was not
+						actually supported. James is trustworthy, solution minded and talented.
+						I would highly recommend James to any company who needs expert software development.
+					</p>
+					<div className='attrib'>
+						<div className='name'>Ali Sar</div>
+						<div className='title'>CEO, 123eWireless</div>
+					</div>
+				</div>
+
+				<div className='testimonial'>
+					<p className='quote'>
+						James is a remarkable talent with skills in hardware (analog and digital)
+						development, software development, signal processing and more. He recently
+						started his own business and would likely be an asset to clients
+						that might require engineering oversight, and/or product development support.
+					</p>
+					<div className='attrib'>
+						<div className='name'>Rick Hartman</div>
+						<div className='title'>Founder, Summitek Instruments</div>
+					</div>
+				</div>
+
+
+				<p className='section'>
+					Here is a short sample of the typical technologies, tools, and
+					software I use when crafting my projects:
+				</p>
+
+				<dl className='tech-list'>
+					<dt>Web Page/App Development</dt>
+					<dd>Javascript, React, HTML, CSS (Stylus/Sass/Less)</dd>
+
+					<dt>Application Development</dt>
+					<dd>C#, SQL, Node, Python, REST, GraphQL</dd>
+
+					<dt>Embedded System Development</dt>
+					<dd>Linux (Debian, Raspbian), Docker, Raspberry Pi, BeagleBone, Gumstix</dd>
+				</dl>
+
 				{close}
 			</article>
 

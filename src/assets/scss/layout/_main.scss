@@ -88,6 +88,83 @@
 
 		}
 
+		.testimonial {
+			padding: 1rem 2rem;
+			margin-bottom: 1rem;
+			background-color: rgba(0,0,0,0.2);
+			border-radius: 4px;
+
+			.quote {
+				color: lightgrey;
+				line-height: 1.75rem;
+				font-weight: 600;
+				font-size: 90%;
+			}
+
+			.attrib {
+				position: relative;
+				padding-right: 70px;
+				text-align: right;
+
+				.name {
+					font-size: 150%;
+				}
+
+				.title {
+					font-size: 100%;
+					font-weight: 400;
+					color: lightgrey;
+				}
+
+				&:before {
+					content: '\f10d';
+					display: block;
+					position: absolute;
+					font-size: 250%;
+					color: #28ac70;
+					-webkit-font-smoothing: antialiased;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-transform: none !important;
+				}
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -28px;
+					width: 56px;
+					height: 56px;
+					border-radius: 50%;
+					background: transparent url('https://media.licdn.com/dms/image/C4E03AQFNz7G-5XE6Rw/profile-displayphoto-shrink_100_100/0?e=1567641600&v=beta&t=uKZ943hpUFhUcwBeEsqN-BvGI3PtSNVjw9aYvc6ly4g') no-repeat center center;
+					background-size: 56px 56px;
+				}
+			}
+
+		}
+
+		.section {
+			margin-top: 3rem;
+			padding-top: 1rem;
+			border: 2px solid #28ac70;
+			border-width: 2px 0 0 0;
+		}
+
+		.tech-list {
+			dt {
+				margin-top: 1rem;
+			}
+			dt:first-child {
+				margin-top: 0;
+			}
+			dd {
+
+			}
+		}
+
 		@include breakpoint(small) {
 			article {
 				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
